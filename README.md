@@ -1,4 +1,12 @@
+Submission :
+
+Nama: Hendrawan Karjadi
+Repository: https://github.com/WPH-Bootcamp/challenge-8-hkarjadi-1
+Deployment: https://challenge-8-mirror.vercel.app/
+Notes: ...
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/dKi29DX4)
+
 # Company Profile - React Assignment
 
 ## Deskripsi Assignment
@@ -68,22 +76,26 @@ src/
 ### Functional Requirements
 
 1. **Implementasi Design Figma**
+
    - Ikuti design yang ada di Figma dengan akurat
    - Perhatikan spacing, typography, dan color scheme
    - Implementasikan semua sections yang ada di design
 
 2. **Component Structure**
+
    - Buat components yang reusable dan modular
    - Pisahkan logic dan presentation
    - Gunakan props dengan TypeScript interface
 
 3. **Responsive Design**
+
    - Website harus responsive dari mobile hingga desktop
    - Breakpoints: Mobile (320px+), Desktop (1024px+)
    - Pastikan tampilan optimal di semua ukuran layar antara mobile dan desktop
    - Test di berbagai device
 
 4. **TypeScript**
+
    - Semua components harus menggunakan TypeScript
    - Define proper types/interfaces untuk props
    - Hindari penggunaan `any` type
@@ -123,11 +135,13 @@ Berdasarkan design Figma, buat sections berikut (sesuaikan dengan design yang di
 ### Memulai Project
 
 1. **Analisis Design Figma**
+
    - Export assets (images, icons) dari Figma
    - Catat color palette dan typography yang digunakan
    - Identifikasi components yang bisa di-reuse
 
 2. **TailwindCSS v4 Sudah Dikonfigurasi**
+
    - TailwindCSS v4 sudah ter-install dan dikonfigurasi
    - File `src/index.css` berisi `@import "tailwindcss"` dan `@source` directive
    - Tambahkan custom theme di CSS dengan `@theme` jika diperlukan
@@ -154,7 +168,7 @@ Berdasarkan design Figma, buat sections berikut (sesuaikan dengan design yang di
   ```typescript
   // types/index.ts
   export interface ButtonProps {
-    variant?: "primary" | "secondary";
+    variant?: 'primary' | 'secondary';
     children: React.ReactNode;
     onClick?: () => void;
   }
@@ -280,6 +294,7 @@ Berdasarkan design Figma, buat sections berikut (sesuaikan dengan design yang di
    ```
 
 2. **Deploy ke Platform**
+
    - Vercel (recommended): Import from GitHub
    - Netlify: Drag & drop atau Git integration
    - GitHub Pages: Setup GitHub Actions
@@ -310,14 +325,16 @@ Notes: [Catatan tambahan jika ada - challenges, learning points, etc.]
 
 **Q: TailwindCSS sudah ter-install?**
 A: Ya! TailwindCSS v4 sudah dikonfigurasi. Kamu bisa langsung gunakan utility classes. File penting:
+
 - `src/index.css` - Berisi `@import "tailwindcss"` dan `@source` directive
 - `vite.config.ts` - Sudah include `@tailwindcss/vite` plugin
 
 Untuk customization, tambahkan `@theme` di `src/index.css`:
+
 ```css
 @theme {
   --color-primary: #your-color;
-  --font-display: "Your Font";
+  --font-display: 'Your Font';
 }
 ```
 
@@ -400,7 +417,7 @@ A: TailwindCSS v4 menggunakan CSS-based configuration. Tambahkan di `src/index.c
 @theme {
   --color-primary: #your-color;
   --color-secondary: #another-color;
-  --font-display: "Your Font Name";
+  --font-display: 'Your Font Name';
   --spacing-custom: 2.5rem;
 }
 ```
@@ -480,13 +497,13 @@ Contoh yang baik: "Saya trying to implement responsive navbar, tapi di mobile me
 
 ## Evaluation Criteria Summary
 
-| Kategori                        | Bobot | Focus Area                                             |
-| ------------------------------- | ----- | ------------------------------------------------------ |
-| **UI/UX Implementation**        | 40%   | Design accuracy, mobile to desktop responsive, visual consistency    |
-| **Code Architecture & Quality** | 30%   | Component structure, TypeScript, project organization  |
-| **Styling Implementation**      | 20%   | TailwindCSS usage, code readability, styling patterns  |
-| **Development Process**         | 10%   | Git management, code quality standards                 |
-| **Bonus**                       | +10%  | Animations, accessibility, performance, extra features |
+| Kategori                        | Bobot | Focus Area                                                        |
+| ------------------------------- | ----- | ----------------------------------------------------------------- |
+| **UI/UX Implementation**        | 40%   | Design accuracy, mobile to desktop responsive, visual consistency |
+| **Code Architecture & Quality** | 30%   | Component structure, TypeScript, project organization             |
+| **Styling Implementation**      | 20%   | TailwindCSS usage, code readability, styling patterns             |
+| **Development Process**         | 10%   | Git management, code quality standards                            |
+| **Bonus**                       | +10%  | Animations, accessibility, performance, extra features            |
 
 ---
 
