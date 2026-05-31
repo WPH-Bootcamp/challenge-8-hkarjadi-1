@@ -5,12 +5,16 @@
  * Docs: https://tailwindcss.com/docs/installation/using-vite
  */
 
-@import "tailwindcss";
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Tell Tailwind where to scan for classes */
 @source "./**/*.{js,jsx,ts,tsx}";
 @source "../index.html";
 
+@custom-variant dark (&:where(.dark, .dark *));
 /**
  * Custom Global Styles
  *
@@ -18,27 +22,64 @@
  * Prefer using Tailwind utilities in components
  */
 
+@theme {
+  --font-outfit: 'Outfit', sans-serif;
+  --font-sand: 'Quicksand', sans-serif;
+
+  --color-primary-100: #ffe0d8;
+  --color-primary-200: #ff623e;
+  --color-primary-300: #cc4e32;
+  --color-primary-400: #80311f;
+  --color-primary-500: #ff6c37;
+
+  --color-neutral-25: #fdfdfd;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e9eaeb;
+  --color-neutral-300: #d5d7da;
+  --color-neutral-400: #a4a7ae;
+  --color-neutral-500: #717680;
+  --color-neutral-600: #535862;
+  --color-neutral-700: #414651;
+  --color-neutral-800: #252b37;
+  --color-neutral-900: #181d27;
+  --color-neutral-950: #0a0d12;
+  --color-neutral-975: #dedcdc;
+  --color-neutral-980: #aaaaaa;
+}
+
+.sub-head {
+  @apply flex flex-col justify-between items-center gap-3 text-center;
+}
+
+.sub-title {
+  @apply text-[28px] leading-9.5 font-bold tracking-[-2%] md:text-[40px] md:leading-14;
+}
+
+.sub-desc {
+  @apply text-sm leading-7 font-medium md:text-lg md:leading-8;
+}
+
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
 
 /* Optional: Custom scrollbar styles */
-/* Uncomment if you want custom scrollbar
-::-webkit-scrollbar {
+/* Uncomment if you want custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
+.custom-scrollbar::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-*/
